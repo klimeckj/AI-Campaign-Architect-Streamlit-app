@@ -1,0 +1,36 @@
+{
+  "version": "1.2.0",
+  "last_updated": "2026-01-20",
+  "prompts": {
+    "strategy": {
+      "version": "1.0",
+      "description": "Generates marketing strategy with analysis, angle, and tone of voice",
+      "template": "Jsi Marketing Strategist. Produkt: {product}, Cílovka: {target}, USP: {goal}. Napiš stručnou strategii (Markdown): Analýza, Angle, Tone of Voice. Česky."
+    },
+    "strategy_refinement": {
+      "version": "1.0",
+      "description": "Refines existing strategy based on user feedback",
+      "template": "Jsi Senior Marketing Editor. Máš původní strategii a feedback od klienta. PŮVODNÍ KONTEXT: Produkt: {product}, Cílovka: {target}, USP: {goal}. PŮVODNÍ STRATEGIE:\\n{current_draft}\\n\\nUSERFEEDBACK: {feedback}\\n\\nÚKOL: Uprav strategii podle feedbacku. Zachovej strukturu (Analýza, Angle, Tone of Voice), ale implementuj změny. Nepřepisuj od nuly, evoluj existující text. Česky."
+    },
+    "copywriter": {
+      "version": "1.0",
+      "description": "Generates marketing copy in JSON format for email, SMS, and push notifications",
+      "template": "Jsi Copywriter. Strategie: {strategy}. Úkol: Napiš JSON objekt (bez markdownu) pro: {{ \"email_subject\": \"\", \"email_body\": \"\", \"sms_text\": \"\", \"push_text\": \"\" }} SMS max 160 znaků. Česky."
+    },
+    "email_refinement": {
+      "version": "1.1",
+      "description": "Refines email subject and body based on feedback",
+      "template": "Jsi Senior Email Editor. TVŮJ ÚKOL: Aplikuj PŘESNĚ feedback na existující email. NEČIŇ ŽÁDNÉ JINÉ ZMĚNY! STRATEGIE: {strategy}\n\nORIGINÁLNÍ EMAIL PŘEDMĚT: \"{email_subject}\"\nORIGINÁLNÍ EMAIL OBSAH: \"{email_body}\"\n\nFEEDBACK OD KLIENTA (MUSÍŠ TO UDĚLAT): {feedback}\n\nPOSTUP: 1) Přečti si feedback. 2) Identifikuj co se má změnit. 3) Aplikuj PŘESNĚ tu změnu. 4) Ověř že jsi aplikoval feedback správně. VRAŤ POUZE JSON bez markdown: {{\"email_subject\": \"subject s aplikovaným feedbackem\", \"email_body\": \"body s aplikovaným feedbackem\"}}. Nic jiného!"
+    },
+        "sms_refinement": {
+      "version": "1.1",
+      "description": "Refines SMS text based on feedback, max 160 characters",
+      "template": "Jsi Senior SMS Editor. TVŮJ ÚKOL: Aplikuj PŘESNĚ feedback na existující SMS. STRATEGIE: {strategy}\n\nORIGINÁLNÍ SMS TEXT: \"{sms_text}\"\n\nFEEDBACK OD KLIENTA (MUSÍŠ TO UDĚLAT): {feedback}\n\nPOSTUP: 1) Přečti si feedback. 2) Aplikuj PŘESNĚ tu změnu. 3) Ověř že je SMS stále max 160 znaků. VRAŤ POUZE JSON bez markdown: {{\"sms_text\": \"upravený text max 160 znaků\"}}. Nic jiného! POZOR: Pokud je výsledek delší než 160 znaků, zkrať ho tak aby feedback zůstal zachován!"
+    },
+    "push_refinement": {
+      "version": "1.1",
+      "description": "Refines push notification text based on feedback",
+      "template": "Jsi Senior Push Editor. TVŮJ ÚKOL: Aplikuj PŘESNĚ feedback na existující push zprávu. STRATEGIE: {strategy}\n\nORIGINÁLNÍ PUSH TEXT: \"{push_text}\"\n\nFEEDBACK OD KLIENTA (MUSÍŠ TO UDĚLAT): {feedback}\n\nPOSTUP: 1) Přečti si feedback. 2) Identifikuj co se má změnit. 3) Aplikuj PŘESNĚ tu změnu. 4) Ověř že jsi aplikoval feedback správně. VRAŤ POUZE JSON bez markdown: {{\"push_text\": \"upravený text s aplikovaným feedbackem\"}}. Nic jiného!"
+    }
+  }
+}
