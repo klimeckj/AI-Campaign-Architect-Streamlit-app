@@ -42,7 +42,7 @@ def init_genai_client(config):
     api_key = config.get("GEMINI_API_KEY")
     if not api_key:
         return None
-    return GeminiClient(api_key=api_key, model_id="gemma-3-1b-it")
+    return GeminiClient(api_key=api_key, model_id="gemma-3-4b-it")
 
 # Globální klient
 client = init_genai_client(config)
