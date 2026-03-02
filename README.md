@@ -1,6 +1,6 @@
 # AI Campaign Architect
 
-> ⚠️ **Proof of Concept** — tato aplikace demonstruje integraci AI do procesu tvorby marketingových kampaní. Použitý jazykový model (`gemma-3-1b-it`) je záměrně nejlevnější dostupnou variantou Google Gemini, proto kvalita generovaných výstupů není produkční — jde o ukázku možností, nikoli hotový nástroj.
+> ⚠️ **Proof of Concept** — tato aplikace demonstruje integraci AI do procesu tvorby marketingových kampaní. Použitý jazykový model (`gemma-3-4b-it`) je záměrně nejlevnější dostupnou variantou Google Gemini, proto kvalita generovaných výstupů není produkční — jde o ukázku možností, nikoli hotový nástroj.
 
 ---
 
